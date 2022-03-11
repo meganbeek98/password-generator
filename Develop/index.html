@@ -4,31 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>Secure Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+    <form id="passwordGeneratorForm">
+      <div class="container">
+        <h2>Secure Password Generator</h2>
+        <div class="result__container">
+        <span id="result"></span>
+        <button id="copy">Copy</button>
+      </div>
+      <div class="options">
+        <div class="option">
+          <label>Length</label>
+          <input type="number" id="length" min="8" max="128" value="8">
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+        <div class="option">
+          <label>Include Uppercase</label>
+          <input type="checkbox" id="uppercase" checked>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+        <div class="option">
+          <label>Include Numbers</label>
+          <input type="checkbox" id="numbers" checked>
+        </div>
+        <div class="option">
+          <label>Include Symbols</label>
+          <input type="checkbox" id="symbols" checked>
         </div>
       </div>
-    </div>
-    <script src="script.js"></script>
+      <button class="btn" id="generate" type="submit">Generate Password</button>
+      </div>
+    </form>
   </body>
 </html>
