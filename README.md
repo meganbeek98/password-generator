@@ -1,4 +1,4 @@
-# <img src=""> Password Generator - v2.0
+# <img src="./assets/favicon_pink-lock.ico"> Password Generator - v2.0
 Development of project began in March 2022.<br> 
 #### By: Megan Beekman [ a student of The OSU Coding Bootcamp (2022) ]<br>
 ---------------------------------------------------------
@@ -8,10 +8,19 @@ Development of project began in March 2022.<br>
 ##### JS<br>
 ----------------------------------------------------------
 ### Links:
-#### [GitHub repository: ](https://github.com/meganbeek98/password-generator.git) <br>
-#### [Deployed project url: ]() <br>
+#### [GitHub repository](https://github.com/meganbeek98/password-generator.git) <br>
+#### [Deployed project url]() 
+
+
 ----------------------------------------------------------
-## Screenshots:
+## Assignment/Challenge Given:
+<br>
+<img src="./assets/screenshot-user-story.png">
+
+----------------------------------------------------------
+
+## Screenshots of Final Deployment:
+<br>
 <img src="./assets/screenshot-blueBG.png">
 
 ###  <p align="center"> Background features linear-gradient colors with CSS Animation </p>
