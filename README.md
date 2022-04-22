@@ -13,7 +13,6 @@ Development of project began in March 2022.<br>
 ----------------------------------------------------------
 ## Screenshots:
 <img src="./assets/screenshot-blueBG.png">
-<br>
 
 ###  <p align="center"> Background features linear-gradient colors with CSS Animation </p>
 <img src="./assets/screenshot-pinkBG.png">
