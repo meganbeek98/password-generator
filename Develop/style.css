@@ -3,8 +3,52 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
-body {
+
+.gradient_bg {
+    background: linear-gradient(310deg, #FF00FF, #00FFFF, #000080, #000000, #FF00FF, #00FFFF, #000080, #000000, #FF00FF, #00FFFF, #000080, #000000);
+    background-size: 1200% 1200%;
+    -webkit-animation: gradient 100s linear infinite;
+    -moz-animation: gradient 100s linear infinite;
+            animation: gradient 100s linear infinite;
+    height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@-moz-keyframes gradient{
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Grandparent container */
+.generator_box {  /* styling was previously in "body" section (see above) */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,7 +58,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-                    /* background: linear-gradient(-45deg, #FF00FF, #00FFFF, #000080, #000000,);
+
 
  /* Parent container */
 .container {
@@ -27,7 +71,8 @@ body {
   background-color: #00FFFF;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 20px 0px;
 }
- 
+
+/* Start of Children containers */ 
 h2 {
   text-align: center;
   padding: 15px 0 10px 0;
@@ -113,18 +158,7 @@ input[type="checkbox"]:checked {
   box-shadow: 0 0 0 3px #000000;
 }
 
-/* @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
-
+/* Media Queries */
 @media (max-width: 690px) {
   #generate {
     font-size: 1rem;

@@ -9,34 +9,49 @@
     <script src="script.js" defer></script>
   </head>
   
-  <body>
-    <form id="passGenForm">
-      <div class="container">
-        <h2>Secure Password Generator</h2>
-        <div class="result__container">
-        <span id="result"></span>
-        <button id="copy">Copy</button>
-      </div>
-      <div class="options">
-        <div class="option">
-          <label>Character Length</label>
-          <input type="number" id="length" min="8" max="128" value="8">
+  <body class="gradient_bg">
+
+    <div class="generator_box">
+
+      <form id="passGenForm">
+
+        <div class="container">
+          <h2>Secure Password Generator</h2>
+          
+          <div class="result__container">
+            <span id="result"></span>
+            <button id="copy">Copy</button>
+          </div>
+
+          <div class="options">
+
+            <div class="option">
+              <label>Character Length</label>
+              <input type="number" id="length" min="8" max="128" value="8">
+            </div>
+            <div class="option">
+              <label>Include Uppercase</label>
+              <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="option">
+              <label>Include Numbers</label>
+              <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="option">
+              <label>Include Symbols</label>
+              <input type="checkbox" id="symbols" checked>
+            </div>
+
+          </div>
+        
+          <button class="btn" id="generate" type="submit">Generate Password</button>
+
         </div>
-        <div class="option">
-          <label>Include Uppercase</label>
-          <input type="checkbox" id="uppercase" checked>
-        </div>
-        <div class="option">
-          <label>Include Numbers</label>
-          <input type="checkbox" id="numbers" checked>
-        </div>
-        <div class="option">
-          <label>Include Symbols</label>
-          <input type="checkbox" id="symbols" checked>
-        </div>
-      </div>
-      <button class="btn" id="generate" type="submit">Generate Password</button>
-      </div>
-    </form>
+
+      </form>
+
+    </div>
+
   </body>
+
 </html>
