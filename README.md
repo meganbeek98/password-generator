@@ -9,7 +9,7 @@ Development of project began in March 2022.<br>
 ----------------------------------------------------------
 ### Links:
 #### [GitHub repository](https://github.com/meganbeek98/password-generator.git) <br>
-#### [Deployed project url]() 
+#### [Deployed project url](https://meganbeek98.github.io/password-generator/) 
 
 
 ----------------------------------------------------------
