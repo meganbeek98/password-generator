@@ -1,4 +1,4 @@
-# <img src="./assets/images/favicon_pink-lock.ico"> Password Generator - v2.0
+# <img src=""> Password Generator - v2.0
 Development of project began in March 2022.<br> 
 #### By: Megan Beekman [ a student of The OSU Coding Bootcamp (2022) ]<br>
 ---------------------------------------------------------
@@ -12,21 +12,21 @@ Development of project began in March 2022.<br>
 #### [Deployed project url: ]() <br>
 ----------------------------------------------------------
 ## Screenshots:
-<img src="./Develop/images/screenshot-blueBG.png">
+<img src="./assets/screenshot-blueBG.png">
 <br>
 
 ###  <p align="center"> Background features linear-gradient colors with CSS Animation </p>
-<img src="./assets/images/screenshot-pinkBG.png">
+<img src="./assets/screenshot-pinkBG.png">
 <br>
 
-### <p align="center"><img src="./assets/images/favicon_pink-lock.ico"> Created a custom favicon for the browser <img src="./assets/images/favicon_pink-lock.ico"> </p>
+### <p align="center"><img src="./assets/favicon_pink-lock.ico"> Created a custom favicon for the browser <img src="./assets/favicon_pink-lock.ico"> </p>
 
-<img src="./assets/images/screenshot-favicon-in-browser.png">
-<img src="./assets/images/screenshot-favicon.png">
+<img src="./assets/screenshot-favicon-in-browser.png">
+<img src="./assets/screenshot-favicon.png">
 <br>
 
 ### <p align="center"> User can copy their generated password to clipboard </p>
-<img src="./assets/images/screenshot-copybtn.png">
+<img src="./assets/screenshot-copybtn.png">
 
 -----------------------------------------------------------
 ### Sources:
