@@ -1,18 +1,19 @@
-// Setting the Dominant (DOM) Elements
-const resultDOM = document.getElementById("result");
-const copybtnDOM = document.getElementById("copy");
-const lengthDOM = document.getElementById("length");
-const uppercaseDOM = document.getElementById("uppercase");
-const numbersDOM = document.getElementById("numbers");
-const symbolsDOM = document.getElementById("symbols");
-const generatebtn = document.getElementById("generate");
-const form = document.getElementById("passwordGeneratorForm");
+// Set the Dominant Elements (EL)
+const resultEL = document.getElementById("result");
+const copybtnEL = document.getElementById("copy");
+const lengthEL = document.getElementById("length");
+const uppercaseEL = document.getElementById("uppercase");
+const numbersEL = document.getElementById("numbers");
+const symbolsEL = document.getElementById("symbols");
+const genbtnEL = document.getElementById("generate");
 
-// Character Codes For The Generator
-const UPPERCASE_CODES = arrayFromLowToHigh(65, 90);
-const LOWERCASE_CODES = arrayFromLowToHigh(97, 122);
-const NUMBER_CODES = arrayFromLowToHigh(48, 57);
-const SYMBOL_CODES = arrayFromLowToHigh(33, 47)
+const form = document.getElementById("passGenForm");
+
+// Array setup for special Characters (Char)
+const UPPERCASE_Char = arrayFromLowToHigh(65, 90);
+const LOWERCASE_Char = arrayFromLowToHigh(97, 122);
+const NUMBERS_Char = arrayFromLowToHigh(48, 57);
+const SYMBOLS_Char = arrayFromLowToHigh(33, 47)
   .concat(arrayFromLowToHigh(58, 64))
   .concat(arrayFromLowToHigh(91, 96))
   .concat(arrayFromLowToHigh(123, 126));
@@ -26,53 +27,53 @@ function arrayFromLowToHigh(low, high) {
   return array;
 }
 
-// The Password Generating Function
-let generatePassword = (
-  characterAmount,
-  includeUppercase,
-  includeNumbers,
-  includeSymbols
+// The Generate (GEN) Password Function
+let passwordGEN = (
+  Char_Amount,
+  incl_UPPERCASE,
+  incl_NUMBERS,
+  incl_SYMBOLS
 ) => {
-  let charCodes = LOWERCASE_CODES;
-  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CODES);
-  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CODES);
-  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CODES);
-  const passwordCharacters = [];
-  for (let i = 0; i < characterAmount; i++) {
+  let Char_RULES = LOWERCASE_Char;     // RULES for Characters (Char)
+  if (incl_UPPERCASE) Char_RULES = Char_RULES.concat(UPPERCASE_Char);
+  if (incl_SYMBOLS) Char_RULES = Char_RULES.concat(SYMBOLS_Char);
+  if (incl_NUMBERS) Char_RULES = Char_RULES.concat(NUMBERS_Char);
+  const passCharacters = [];
+  for (let i = 0; i < Char_Amount; i++) {
     const characterCode =
-      charCodes[Math.floor(Math.random() * charCodes.length)];
-    passwordCharacters.push(String.fromCharCode(characterCode));
+      Char_RULES[Math.floor(Math.random() * Char_RULES.length)];
+    passCharacters.push(String.fromCharCode(characterCode));
   }
-  return passwordCharacters.join("");
+  return passCharacters.join("");
 };
 
-// Copy password button
-copybtnDOM.addEventListener("click", () => {
+// The Copy Button -- EventListener
+copybtnEL.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
-  const passwordToCopy = resultDOM.innerText;
-  // A Case when Password is Empty
-  if (!passwordToCopy) return;
+  const pass_ToCopy = resultEL.innerText;
+  // IF Password result container is EMPTY
+  if (!pass_ToCopy) return;
   // Copy Functionality
-  textarea.value = passwordToCopy;
+  textarea.value = pass_ToCopy;
   document.body.appendChild(textarea);
   textarea.select();
-  document.execCommand("copy");
+  navigator.clipboard.writeText(pass_ToCopy);
   textarea.remove();
-  alert("Password Copied to Clipboard");
+  alert("Your secure password has been copied to clipboard!");
 });
 
-// Checking the options that are selected and setting the password
+// Taking in to account the options that are selected -- THEN, generating the random password when submitbtn ("Generate Password" btn) is clicked
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const characterAmount = lengthDOM.value;
-  const includeUppercase = uppercaseDOM.checked;
-  const includeNumbers = numbersDOM.checked;
-  const includeSymbols = symbolsDOM.checked;
-  const password = generatePassword(
-    characterAmount,
-    includeUppercase,
-    includeNumbers,
-    includeSymbols
+  const Char_Amount = lengthEL.value;
+  const incl_UPPERCASE = uppercaseEL.checked;      // incl == "include"
+  const incl_NUMBERS = numbersEL.checked;         // "      "
+  const incl_SYMBOLS = symbolsEL.checked;        // "      "
+  const password = passwordGEN(
+    Char_Amount,
+    incl_UPPERCASE,
+    incl_NUMBERS,
+    incl_SYMBOLS
   );
-  resultDOM.innerText = password;
+  resultEL.innerText = password;
 });
